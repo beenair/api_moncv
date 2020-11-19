@@ -4,8 +4,8 @@
 require_once('models/Profil.php');
 
 
-$model = new Profil();
+$profil = new Profil();
 
-$profil = $model->getProfil();
+$infosprofil = $profil->get();
 
-echo $profil;
+return $infosprofil;

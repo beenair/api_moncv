@@ -3,8 +3,8 @@
 require_once('models/Formation.php');
 
 
-$model = new Formation();
+$formation = new Formation();
 
-$formations = $model->getFormation();
+$infosformation = $formation->get();
 
-echo $formations;
+return $infosformation ;

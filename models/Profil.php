@@ -5,8 +5,10 @@ require_once('Model.php');
 
 class Profil extends Model{
 
-
-  public function getProfil(){
+  /**
+   * Fonction retournant les informations relatives au profil
+   */
+  public function get(){
 
     $query= $this->pdo->prepare("SELECT * FROM profil");
     $query->execute();

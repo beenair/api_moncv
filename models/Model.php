@@ -7,7 +7,9 @@ require_once('database.php');
 
     protected $pdo;
 
-
+    /**
+     * Fonction retournant la connexion à la base de données.
+     */
     public function __construct(){
 
       $this->pdo = getPdo();

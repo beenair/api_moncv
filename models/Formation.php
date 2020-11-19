@@ -5,10 +5,12 @@ require_once('Model.php');
 
 class Formation extends Model{
 
+  /**
+   * Fonction retournant les formations suivies et diplomes obtenus
+   */
+  public function get(){
 
-  public function getFormation(){
-
-    $query= $this->pdo->prepare("SELECT * FROM formationn");
+    $query= $this->pdo->prepare("SELECT * FROM formation");
     $query->execute();
     
     $result = $query->fetchAll();

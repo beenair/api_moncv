@@ -3,7 +3,7 @@
 
   function getPdo(){
 
-    $pdo = new PDO('mysql:host=localhost;dbname=moncv', 'root', 'root');
+    $pdo = new PDO('mysql:host=localhost;dbname=moncv', 'cv', 'cv');
 
     return $pdo;
 

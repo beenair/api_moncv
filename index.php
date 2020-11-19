@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +14,17 @@
 </br>
 
 <a href="profil.php">Visualisation du profil</a>
+</br>
+</br>
+
+<a href="experience.php">Visualisation des expériences</a>
+</br>
+</br>
+
+<a href="tests.php">Page de tests</a>
+
+
+
   
 </body>
 </html>
