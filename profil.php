@@ -8,4 +8,5 @@ $profil = new Profil();
 
 $infosprofil = $profil->get();
 
-return $infosprofil;
+
+echo $infosprofil;

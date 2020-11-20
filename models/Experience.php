@@ -16,7 +16,7 @@ class Experience extends Model{
     $result = $query->fetchAll();
     $experience = json_encode($result);
 
-    echo ($experience);
+    return ($experience);
 
   }
 

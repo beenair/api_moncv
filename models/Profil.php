@@ -16,6 +16,7 @@ class Profil extends Model{
     $result = $query->fetchAll();
     $profil = json_encode($result);
 
+
     return $profil;
 
   }
