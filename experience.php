@@ -8,4 +8,4 @@ $experience = new Experience();
 
 $infosexperience = $experience->get();
 
-return $infosexperience;
+echo $infosexperience;

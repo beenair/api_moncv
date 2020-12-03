@@ -17,6 +17,25 @@ DROP DATABASE IF EXISTS `moncv`;
 CREATE DATABASE IF NOT EXISTS `moncv` /*!40100 DEFAULT CHARACTER SET utf8 */;
 USE `moncv`;
 
+-- Listage de la structure de la table moncv. experience
+DROP TABLE IF EXISTS `experience`;
+CREATE TABLE IF NOT EXISTS `experience` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `entreprise` char(50) NOT NULL DEFAULT '0',
+  `titre` char(255) NOT NULL DEFAULT '0',
+  `dateDebut` date DEFAULT NULL,
+  `dateFin` date DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='Table regroupant l''ensemble des expériences professionnelles.';
+
+-- Listage des données de la table moncv.experience : ~0 rows (environ)
+DELETE FROM `experience`;
+/*!40000 ALTER TABLE `experience` DISABLE KEYS */;
+INSERT INTO `experience` (`id`, `entreprise`, `titre`, `dateDebut`, `dateFin`) VALUES
+	(1, 'JUXTA', 'Technicien Support', '2019-04-01', '2019-11-01');
+/*!40000 ALTER TABLE `experience` ENABLE KEYS */;
+
 -- Listage de la structure de la table moncv. formation
 DROP TABLE IF EXISTS `formation`;
 CREATE TABLE IF NOT EXISTS `formation` (
@@ -48,19 +67,19 @@ CREATE TABLE IF NOT EXISTS `profil` (
   `date_naissance` date NOT NULL,
   `telephone` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
   `mail` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `adresse_numero` int(11) NOT NULL,
-  `adresse_voie` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
   `adresse_code_postale` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
   `adresse_ville` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `permis` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `mobilite` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `presentation` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Listage des données de la table moncv.profil : ~0 rows (environ)
+-- Listage des données de la table moncv.profil : ~1 rows (environ)
 DELETE FROM `profil`;
 /*!40000 ALTER TABLE `profil` DISABLE KEYS */;
-INSERT INTO `profil` (`id`, `nom`, `prenom`, `date_naissance`, `telephone`, `mail`, `adresse_numero`, `adresse_voie`, `adresse_code_postale`, `adresse_ville`, `presentation`) VALUES
-	(1, 'THOMAS', 'Benjamin', '1986-08-08', '0687847490', 'b.thomas@beenair.fr', 2, 'Allée des Vergers', '54110', 'Varangéville', 'blabla');
+INSERT INTO `profil` (`id`, `nom`, `prenom`, `date_naissance`, `telephone`, `mail`, `adresse_code_postale`, `adresse_ville`, `permis`, `mobilite`, `presentation`) VALUES
+	(1, 'THOMAS', 'Benjamin', '1986-08-08', '0687847490', 'b.thomas@beenair.fr', '54110', 'Varangéville', 'Permis B, voiture personnelle', 'Région de Nancy et Lunéville', 'blabla');
 /*!40000 ALTER TABLE `profil` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
