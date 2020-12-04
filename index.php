@@ -21,6 +21,14 @@
 </br>
 </br>
 
+<a href="missions.php">Visualisation des missions</a>
+</br>
+</br>
+
+<a href="hobbies.php">Visualisation des loisirs</a>
+</br>
+</br>
+
 <a href="tests.php">Page de tests</a>
 
 

@@ -13,7 +13,7 @@ class Profil extends Model{
     $query= $this->pdo->prepare("SELECT * FROM profil");
     $query->execute();
     
-    $result = $query->fetchObject();
+    $result = $query->fetchAll();
     $profil = json_encode($result);
 
 

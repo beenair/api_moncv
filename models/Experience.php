@@ -13,7 +13,7 @@ class Experience extends Model{
     $query= $this->pdo->prepare("SELECT * FROM experience");
     $query->execute();
     
-    $result = $query->fetchObject();
+    $result = $query->fetchAll();
     $experience = json_encode($result);
 
     return ($experience);

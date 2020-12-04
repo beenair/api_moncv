@@ -7,4 +7,4 @@ $formation = new Formation();
 
 $infosformation = $formation->get();
 
-return $infosformation ;
+echo $infosformation ;

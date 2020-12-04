@@ -13,7 +13,7 @@ class Formation extends Model{
     $query= $this->pdo->prepare("SELECT * FROM formation");
     $query->execute();
     
-    $result = $query->fetchObject();
+    $result = $query->fetchAll();
     $formation = json_encode($result);
 
     return $formation;
