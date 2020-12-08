@@ -10,7 +10,7 @@ class Experience extends Model{
    */
   public function get(){
 
-    $query= $this->pdo->prepare("SELECT * FROM experience");
+    $query= $this->pdo->prepare("SELECT * FROM experience ORDER BY dateFin DESC");
     $query->execute();
     
     $result = $query->fetchAll();

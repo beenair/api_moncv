@@ -17,7 +17,7 @@ class Profil extends Model{
     $profil = json_encode($result);
 
 
-    return $profil;
+    return ($profil);
 
   }
 
